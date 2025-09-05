@@ -50,11 +50,11 @@
 
 
 <body>
-    <div class="mouseCursor cursor-outer"></div>
-    <div class="mouseCursor cursor-inner"><span>Drag</span></div>
+    {{-- <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner"><span>Drag</span></div> --}}
 
     <!-- pre loader area start -->
-    <div id="loading">
+    {{-- <div id="loading">
         <div id="preloader">
             <div class="preloader-thumb-wrap">
                 <div class="preloader-thumb">
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- pre loader area end -->
 
 
