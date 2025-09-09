@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>NISALA HOTEL | LeoSpree</title>
+    <title>NISALA HOTEL</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -367,7 +367,7 @@
                 <div class="col-md-6">
                     <div class="bd-footer-copyright">
                         <p>Copyright &amp; Design By <span>© <a
-                                href="">LeoSpree</a></span> - 2025</p>
+                                href="">TeamABC</a></span> - 2025</p>
                     </div>
                 </div>
                 <div class="col-md-6 text-md-end">

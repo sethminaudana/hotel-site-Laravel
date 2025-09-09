@@ -92,8 +92,7 @@
                </div>
                <div class="col-xl-6 mb-60">
                   <div class="bd-contact-map">
-                    {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.523653521104!2d79.91047687373198!3d6.827635919556951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae33b959729d713%3A0x59a6537f055ae25f!2sLeospree%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1750391433866!5m2!1sen!2slk"
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                    
                     <iframe src="{{ \App\Models\Setting::get('map_url', 'https://maps.google.com/...default-url-here...') }}"
                  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
