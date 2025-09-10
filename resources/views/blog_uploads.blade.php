@@ -23,42 +23,7 @@
         </div>
         </div>
     </section>
-    <!-- breadcrumb area end here  -->
-{{-- <body class="container pt-100 mt-4">
 
-    <div class="media-container">
-        <h2>{{ $media->title }}</h2>
-        <p>{{ $media->description }}</p>
-
-        @if($media->image_path)
-            <img src="{{ asset('storage/' . $media->image_path) }}" class="media-image mb-3" alt="Media Image">
-        @endif
-
-        @if($media->video_url && Str::contains($media->video_url, 'youtube.com'))
-            <div class="ratio ratio-16x9 mb-3">
-                <iframe class="video-frame"
-                        src="{{ Str::replace('watch?v=', 'embed/', $media->video_url) }}"
-                        frameborder="0"
-                        allowfullscreen></iframe>
-            </div>
-        @elseif($media->video_url)
-            <p><a href="{{ $media->video_url }}" target="_blank">View Video</a></p>
-        @endif
-
-        <div class="d-flex justify-content-between mt-4">
-            @if($previous)
-                <a href="{{ route('media.show', $previous->id) }}" class="btn btn-outline-primary">&laquo; Previous</a>
-            @else
-                <span></span>
-            @endif
-
-            @if($next)
-                <a href="{{ route('media.show', $next->id) }}" class="btn btn-outline-primary">Next &raquo;</a>
-            @endif
-        </div>
-    </div>
-
-</body> --}}
  <section class="bd-blog-3-details-area x-clip pb-60">
         <div class="container">
         <div class="row">
@@ -103,30 +68,8 @@
                                 </div>
                                 </blockquote>
                             </div>
-                            {{-- <p>The guest experience doesn’t begin at check-in anymore; with
-                                engaging blog
-                                content, hotels can start offering value to guests before they even start
-                                thinking about booking a room. By the time these guests start considering
-                                which
-                                property to book at, you’ve already got a leg up on the competition. </p> --}}
                             <div class="bd-blog-3-topic">
-                                {{-- <h4 class="bd-blog-3-topic-title">Know More About Royel</h4>
-                                <p>A 21st-century hotel must have a website, social media profiles, and a blog
-                                -
-                                right? Not so fast. Though a blog might seem like a necessary part of a
-                                hotel’s online presence, no benefit comes from blogging for blogging’s
-                                sake.
-                                In fact, cranking out a multitude of posts may do more harm than good
-                                without
-                                carefully choosing topics and producing high-quality content. When it comes
-                                to
-                                hotel blogs, choose quality over quantity - or choose not to have a blog at
-                                all, such as the Maven Hotel in Denver.</p> --}}
                                 <div class="bd-blog-3-topic-video mt-30 mb-35">
-                                {{-- <div class="bd-blog-3-topic-thumb">
-                                    <img src="{{asset('img/roombg.jpg')}}" alt="img not found!">
-                                </div> --}}
-
                                         @php
     preg_match('/(?:\?v=|\/embed\/|\.be\/)([^\s&]+)/', $media->video_url, $matches);
     $videoId = $matches[1] ?? null;
@@ -154,30 +97,8 @@
                                             class="fa-solid fa-play"></i></a>
                                 </div> --}}
                                 </div>
-                                {{-- <div class="bd-blog-3-topic-list theme-bg-2">
-                                <ul>
-                                    <li>Hoteliers see many faces come through their hotels, which is great
-                                        because it’s a sign of steady business. </li>
-                                    <li>The downside is that it can make it harder to remember who your
-                                        repeat
-                                        guests are.</li>
-                                    <li>How can you, as an independent hotelier on trivago, increase traffic
-                                        to
-                                        your website to boost direct bookings</li>
-                                    <li>There are different ways they can be implemented according to your
-                                        management
-                                        plan</li>
-                                </ul>
-                                </div> --}}
+                                
                             </div>
-                            {{-- <div class="bd-blog-3-topic">
-                                <h4 class="bd-blog-3-topic-title">Conclusion of This Blog</h4>
-                                <p>But creating a blog is only half of the journey; partnering with a digital
-                                marketing agency like NextGuest Digital will provide the expertise and
-                                exposure necessary to put your blog in front of the right readers. A hotel
-                                digital marketing agency like NextGuest will even help develop content for
-                                your website that is purpose built to bring in prospective guests.</p>
-                            </div> --}}
                             <div class="bd-blog-3-share d-flex justify-content-between align-items-center flex-wrap">
                                 <div class="bd-blog-3-tag">
                                 <ul>
@@ -221,157 +142,17 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="bd-blog-3-comment-wrap theme-bg-2">
-                            <div class="bd-blog-3-comment">
-                                <h4 class="bd-blog-3-comment-title mb-30">Comments</h4>
-                                <ul>
-                                <li>
-                                    <div class="bd-blog-3-comment-box">
-                                        <div class="bd-blog-3-comment-info mb-15">
-                                            <div class="bd-blog-3-comment-thumb-wrap">
-                                            <div class="bd-blog-3-comment-thumb">
-                                                <img src="assets/img/blog/comment-1.png" alt="img not found!">
-                                            </div>
-                                            <div class="bd-blog-3-comment-author">
-                                                <h5>Allen D.</h5>
-                                                <span>27 Oct 2022 at 2:09pm</span>
-                                            </div>
-                                            </div>
-                                            <div class="bd-blog-3-comment-replay-btn">
-                                            <a href="#"><i class="fa-regular fa-reply"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="bd-blog-3-comment-text">
-                                            <p>The room. And also the stuff were amazing and friendly. They
-                                            offered me a whole suit which was exceeded my expectations. The
-                                            room was spacious, you can play cricket. </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                </ul>
-                            </div>
-                            <div class="bd-comment-form">
-                                <h3 class="bd-contact-form-title mb-25">Leave a replay</h3>
-                                <form action="#">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="bd-contact-input mb-20">
-                                            <label for="textarea">Comments <sup><i
-                                                    class="fa-solid fa-star-of-life"></i></sup></label>
-                                            <textarea name="textarea" id="textarea" class="theme-bg-2"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="bd-contact-input mb-30">
-                                            <label for="name">Name <sup><i
-                                                    class="fa-solid fa-star-of-life"></i></sup></label>
-                                            <input id="name" type="text" class="theme-bg-2">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="bd-contact-input mb-30">
-                                            <label for="email">Email <sup><i
-                                                    class="fa-solid fa-star-of-life"></i></sup></label>
-                                            <input id="email" type="text" class="theme-bg-2">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mb-30">
-                                        <div class="bd-contact-agree d-flex align-items-center">
-                                            <input class="ryl-cp" type="checkbox" id="check-agree">
-                                            <label class="check-label ryl-cp" for="check-agree">Save Data for
-                                            Next
-                                            Comment</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="bd-blog__btn mb-15">
-                                            <button type="submit" class="bd-btn">
-                                            Post Comment <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                </form>
-                            </div>
-                        </div> --}}
                     </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="bd-blog-3-sidebar-wrapper mb-60">
-                    {{-- <div class="bd-blog-3-sidebar mb-50">
-                    <h5 class="bd-blog-3-sidebar-title">Search</h5>
-                    <div class="bd-blog-3-sidebar-content">
-                        <div class="bd-blog-3-search">
-                            <form action="#">
-                                <div class="bd-blog-3-search-input-2">
-                                <input type="text" placeholder="Type here..." id="bd-blog-3-search-input-label">
-                                <div class="bd-blog-3-search-submit">
-                                    <button type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
-                                </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    </div> --}}
+                   
                     <div class="bd-blog-3-sidebar mb-50">
                     <h5 class="bd-blog-3-sidebar-title">Latest Blog</h5>
                     <div class="bd-blog-3-latest">
                         <ul>
-                            {{-- @foreach($media as $post)
-                            <li>
-                                <div class="bd-blog-3-latest-content">
-                                <div class="bd-blog-3-latest-thumb">
-                                    <a href="{{url('/blog/view/'. $post->id)}}">
-                                <img src="{{ asset('storage/' . $post->image_path) }}" class="media-image mb-3" alt="Media Image">
-                               </a>
-                                </div>
-                                <div class="bd-blog-3-latest-title-wrap">
-                                    <h6 class="bd-blog-3-latest-title"><a href="{{url('/blog/view/'. $post->id)}}">hey have
-                                            {{ $post->title }}</a></h6>
-                                    <div class="bd-blog-3-latest-meta">
-                                        <i class="fa-solid fa-calendar-days"></i><span>{{ $post->created_at->format('d','M','y') }}</span>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                            @endforeach --}}
-                            {{-- <li>
-                                <div class="bd-blog-3-latest-content">
-                                <div class="bd-blog-3-latest-thumb">
-                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img/blog/blog3.jpg')}}"
-                                            alt="img not found!"></a>
-                                </div>
-                                <div class="bd-blog-3-latest-title-wrap">
-                                    <h6 class="bd-blog-3-latest-title"><a href="{{url('/blog-details')}}">We're
-                                            changing the
-                                            future of travel, Watch the
-                                            steps </a></h6>
-                                    <div class="bd-blog-3-latest-meta">
-                                        <i class="fa-solid fa-calendar-days"></i><span>27 Oct 2022</span>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="bd-blog-3-latest-content">
-                                <div class="bd-blog-3-latest-thumb">
-                                    <a href="{{url('/blog-details')}}"><img src="{{asset('img/blog/blog4.jpg')}}"
-                                            alt="img not found!"></a>
-                                </div>
-                                <div class="bd-blog-3-latest-title-wrap">
-                                    <h6 class="bd-blog-3-latest-title"><a href="{{url('/blog-details')}}">Best
-                                            hotel
-                                            blogs
-                                            and how to succeed with yours
-                                            hotel </a></h6>
-                                    <div class="bd-blog-3-latest-meta">
-                                        <i class="fa-solid fa-calendar-days"></i><span>27 Oct 2022</span>
-                                    </div>
-                                </div>
-                                </div>
-                            </li> --}}
                         </ul>
                     </div>
                     </div>

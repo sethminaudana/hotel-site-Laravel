@@ -19,15 +19,9 @@
                                         <div class="bd-hero__subtitle animate__animated" data-animation="fadeInUp"
                                         data-delay=".3s">
                                         <span>
-                                            @auth
-                                                @if(Auth::user()->role && Auth::user()->role->role_name === 'admin')
-                                                    <span>Welcome </span>
-                                                @else
-                                                    <span>Welcome </span>
-                                                @endif
-                                            @else
+                                        
                                                 <span>Welcome </span>
-                                            @endauth
+                                           
                                         </span>
                                         </div>
                                         <div class="bd-hero__title-wrap p-relative">
@@ -66,15 +60,7 @@
                                         <div class="bd-hero__subtitle animate__animated" data-animation="fadeInUp"
                                         data-delay=".3s">
                                         <span>
-                                            @auth
-                                                @if(Auth::user()->role && Auth::user()->role->role_name === 'admin')
-                                                    <span>Welcome </span>
-                                                @else
-                                                    <span>Welcome </span>
-                                                @endif
-                                            @else
                                                 <span>Welcome </span>
-                                            @endauth
                                         </span>
                                         </div>
                                         <div class="bd-hero__title-wrap p-relative">
@@ -113,15 +99,7 @@
                                         <div class="bd-hero__subtitle animate__animated" data-animation="fadeInUp"
                                         data-delay=".3s">
                                             <span>
-                                                @auth
-                                                    @if(Auth::user()->role && Auth::user()->role->role_name === 'admin')
-                                                        <span>Welcome </span>
-                                                    @else
-                                                        <span>Welcome </span>
-                                                    @endif
-                                                @else
                                                     <span>Welcome </span>
-                                                @endauth
                                             </span>
                                         </div>
                                         <div class="bd-hero__title-wrap p-relative">
@@ -491,104 +469,7 @@
 
                           @livewire('offers-slider')
 
-                            {{-- <div class="swiper-slide">
-                            <div class="bd-offer">
-                                <div class="bd-offer__thumb p-relative">
-                                    <img src="{{asset('img/offer/sale2.jpg')}}" alt="image not found">
-                                    <div class="bd-offer__meta">
-                                        <span>25% off</span>
-                                    </div>
-                                    <div class="bd-offer__content-visble">
-                                        <h4 class="bd-offer__title-2"><a href="/offer-details">wellness
-                                            recharge</a></h4>
-                                    </div>
-                                    <div class="bd-offer__content">
-                                        <h4 class="bd-offer__title"><a href="/offer-details">wellness recharge</a>
-                                        </h4>
-                                        <p>The Nisala Hotel offers unforgettable food and drink options. A memorable
-                                        stay with
-                                        delicious
-                                        </p>
-                                        <div class="bd-offer__btn">
-                                        <a href="booking-form.html">Book Now<i class="fa-regular fa-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="swiper-slide">
-                            <div class="bd-offer">
-                                <div class="bd-offer__thumb p-relative">
-                                    <img src="{{asset('img/offer/sale3.jpg')}}" alt="offer">
-                                    <div class="bd-offer__meta">
-                                        <span>25% off</span>
-                                    </div>
-                                    <div class="bd-offer__content-visble">
-                                        <h4 class="bd-offer__title-2"><a href="/offer-details">you & me</a></h4>
-                                    </div>
-                                    <div class="bd-offer__content">
-                                        <h4 class="bd-offer__title"><a href="/offer-details">you & me</a></h4>
-                                        <p>The Nisala Hotel offers unforgettable food and drink options. A memorable
-                                        stay with
-                                        delicious
-                                        </p>
-                                        <div class="bd-offer__btn">
-                                        <a href="booking-form.html">Book Now<i class="fa-regular fa-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="swiper-slide">
-                            <div class="bd-offer">
-                                <div class="bd-offer__thumb p-relative">
-                                    <img src="{{asset('img/offer/sale4.jpg')}}" alt="image not found">
-                                    <div class="bd-offer__meta">
-                                        <span>20% off</span>
-                                    </div>
-                                    <div class="bd-offer__content-visble">
-                                        <h4 class="bd-offer__title-2"><a href="/offer-details">seaside getway</a>
-                                        </h4>
-                                    </div>
-                                    <div class="bd-offer__content">
-                                        <h4 class="bd-offer__title"><a href="/offer-details">seaside getway</a>
-                                        </h4>
-                                        <p>The Nisala Hotel offers unforgettable food and drink options. A memorable
-                                        stay with
-                                        delicious
-                                        </p>
-                                        <div class="bd-offer__btn">
-                                        <a href="booking-form.html">Book Now<i class="fa-regular fa-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="swiper-slide">
-                            <div class="bd-offer">
-                                <div class="bd-offer__thumb p-relative">
-                                    <img src="{{asset('img/offer/sale5.jpg')}}" alt="image not found">
-                                    <div class="bd-offer__meta">
-                                        <span>25% off</span>
-                                    </div>
-                                    <div class="bd-offer__content-visble">
-                                        <h4 class="bd-offer__title-2"><a href="/offer-details">wellness
-                                            recharge</a></h4>
-                                    </div>
-                                    <div class="bd-offer__content">
-                                        <h4 class="bd-offer__title"><a href="/offer-details">wellness recharge</a>
-                                        </h4>
-                                        <p>The Nisala Hotel offers unforgettable food and drink options. A memorable
-                                        stay with
-                                        delicious
-                                        </p>
-                                        <div class="bd-offer__btn">
-                                        <a href="{{url('/contact')}}">Book Now<i class="fa-regular fa-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div> --}}
+          <!-- offer area end here -->                   
 
     <script>
     $(document).ready(function () {
@@ -617,7 +498,7 @@
 </script>
 
         @endsection
-        <!-- offer area end here -->
+       
 
 
 

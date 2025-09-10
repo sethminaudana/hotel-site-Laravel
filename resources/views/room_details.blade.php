@@ -26,14 +26,7 @@
             </section>
             <!-- breadcrumb area end here  -->
 
-    {{-- @if($bookingDate)
-        <div class="alert alert-info">
-            You selected check-in: <strong>{{ $bookingDate }}</strong>,
-            check-out: <strong>{{ $checkout_date }}</strong>,
-            Adults: <strong>{{ $adults }}</strong>,
-            Children: <strong>{{ $children }}</strong>
-        </div>
-    @endif --}}
+    
             <section class="bd-room-details-area">
                 <div class="container">
                     <div class="row">
@@ -53,12 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    {{-- <div class="bd-room-details__thumb mb-30">
-                                        <img src="{{$room->image_path}}" alt="image not found">
-                                    </div> --}}
-                                    {{-- <div class="bd-room-details__thumb mb-30">
-                                        <img src="{{asset('img/room/room3.jpg')}}" alt="image not found">
-                                    </div> --}}
+                                  
                                 </div>
                                 </div>
                             </div>
@@ -165,18 +153,7 @@
                                 </div>
                                 </div>
 
-                                {{-- <div class="bd-room-details__widget pb-30 mb-30">
-                                <h4 class="bd-room-details__widget-title mb-20">Bathroom</h4>
-                                <div class="bd-room-details__list">
-                                    <ul>
-                                        @forelse($room->details->bedsAndBlankets as $feature)
-                                            <li><i class="flaticon-check-circle"></i>{{$feature->feature_name}}</li>
-                                        @empty
-                                            <li>No Beds and blackets</li>
-                                        @endforelse
-                                    </ul>
-                                </div>
-                                </div> --}}
+                                
                                 <div class="bd-room-details__widget pb-30 mb-30">
                                 <h4 class="bd-room-details__widget-title mb-20">Other Facilities</h4>
                                 <div class="bd-room-details__list">
@@ -194,11 +171,6 @@
                             </div>
 
                         </div>
-                        {{-- <div class="bd-booking-3__submit mt-15">
-                                <button type="button" class="mb-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
-                                    <span  class="fs-4">Book Now</span> <i class="fa-regular fa-arrow-right-long"></i>
-                               </button>
-                                </div> --}}
                          @if($bookingDate)
                         {{-- <div class="bd-room__btn mb-4"> --}}
                             <div class="bd-booking-3__submit mt-15">
@@ -212,12 +184,6 @@
                                     <span  class="fs-4">Book Now</span> <i class="fa-regular fa-arrow-right-long"></i>
                                </button>
                                 </div>
-                               {{-- <div class="bd-room__btn mb-4">
-                                <button type="button" class="" data-bs-toggle="modal" data-bs-target="#bookingModal">
-                                    <span>book now</span> <i class="fa-regular fa-arrow-right-long"></i>
-
-                                </button>
-                            </div> --}}
 
                         @endif
 
@@ -553,132 +519,7 @@ function isDateTimeDisabled(date) {
                     </div>
                     <div class="row">
                         @include('components.room_cards', ['rooms' => $roomsfilter])
-                    {{-- <div class="col-xxl-4 col-xl-6 col-lg-6">
-                        <div class="bd-room mb-30">
-                            <div class="bd-room__content">
-                                <h4 class="bd-room__title mb-20"><a href="room-details.html">Queen Deluxe room</a></h4>
-                                <div class="bd-room__price mb-30">
-                                <p>$399 <span>/NIGHT</span></p>
-                                </div>
-                                <div class="bd-room__thumb-wrap mb-30">
-                                <div class="bd-room__thumb">
-                                    <img src="{{asset('img/room/room5.jpg')}}" alt="room image">
-                                </div>
-                                <div class="bd-room__details">
-                                    <p>The Gage Hotel offers unforgettable food and drink options. A memorable stay with
-                                        delicious breakfast Join us.</p>
-                                    <div class="bd-room__list">
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-taxi"></i>
-                                            <p>Pick Up & Drop</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-garage"></i>
-                                            <p>Parking Space</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-breakfast"></i>
-                                            <p>Breakfast</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-swimming-pool"></i>
-                                            <p>Swimming Pool</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="bd-room__btn">
-                                <a href="room-details.html"><span>book now</span> <i
-                                        class="fa-regular fa-arrow-right-long"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    {{-- <div class="col-xxl-4 col-xl-6 col-lg-6">
-                        <div class="bd-room mb-30">
-                            <div class="bd-room__content">
-                                <h4 class="bd-room__title mb-20"><a href="room-details.html">Couple sea view Room</a></h4>
-                                <div class="bd-room__price mb-30">
-                                <p>$599 <span>/NIGHT</span></p>
-                                </div>
-                                <div class="bd-room__thumb-wrap mb-30">
-                                <div class="bd-room__thumb">
-                                    <img src="{{asset('img/room/room6.jpg')}}" alt="room image">
-                                </div>
-                                <div class="bd-room__details">
-                                    <p>The Gage Hotel offers unforgettable food and drink options. A memorable stay with
-                                        delicious breakfast Join us.</p>
-                                    <div class="bd-room__list">
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-taxi"></i>
-                                            <p>Pick Up & Drop</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-garage"></i>
-                                            <p>Parking Space</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-breakfast"></i>
-                                            <p>Breakfast</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-swimming-pool"></i>
-                                            <p>Swimming Pool</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="bd-room__btn">
-                                <a href="room-details.html"><span>book now</span> <i
-                                        class="fa-regular fa-arrow-right-long"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-6 col-lg-6">
-                        <div class="bd-room mb-30">
-                            <div class="bd-room__content">
-                                <h4 class="bd-room__title mb-20"><a href="room-details.html">Junior Suites room</a></h4>
-                                <div class="bd-room__price mb-30">
-                                <p>$299 <span>/NIGHT</span></p>
-                                </div>
-                                <div class="bd-room__thumb-wrap mb-30">
-                                <div class="bd-room__thumb">
-                                    <img src="{{asset('img/room/room4.jpg')}}" alt="room image">
-                                </div>
-                                <div class="bd-room__details">
-                                    <p>The Gage Hotel offers unforgettable food and drink options. A memorable stay with
-                                        delicious breakfast Join us.</p>
-                                    <div class="bd-room__list">
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-taxi"></i>
-                                            <p>Pick Up & Drop</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-garage"></i>
-                                            <p>Parking Space</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-breakfast"></i>
-                                            <p>Breakfast</p>
-                                        </div>
-                                        <div class="bd-room__list-item">
-                                            <i class="flaticon-swimming-pool"></i>
-                                            <p>Swimming Pool</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                               <div class="bd-room__btn">
-                                 <a href="room-details.html"><span>book now</span> <i
-                                        class="fa-regular fa-arrow-right-long"></i></a>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </div> --}}
+                    
                     {{-- See More Button --}}
                 <div class="text-center mt-4">
                     <a href="{{ route('rooms.all') }}" class="btn btn-outline-secondary text-dark">See More Rooms...</a>

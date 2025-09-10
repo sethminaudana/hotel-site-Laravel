@@ -71,25 +71,9 @@
                         </div>
                         </div>
 
-                         {{-- <div class="bd-booking-4__input p-relative mb-15">
-                              <select class="bd-nice-select">
-                                 <option value="">Adult</option>
-                                 <option value="">1 Adult</option>
-                                 <option value="">2 Adult</option>
-                                 <option value="">3 Adult</option>
-                                 <option value="">4 Adult</option>
-                                 <option value="">5 Adult</option>
-                              </select>
-                           </div> --}}
+                        
                     <div class="col-md-10 mb-3">
-                    {{-- <select name="adults" id="adults" class="form-control" required>
-                        <option value="">Select Adults</option>
-                        @foreach (range(1, 10) as $i)
-                            <option value="{{ $i }}" {{ old('adults', request('adults')) == $i ? 'selected' : '' }}>
-                                {{ $i }}
-                            </option>
-                        @endforeach
-                    </select> --}}
+                    
                     </div>
                     <div class="col-md-10 mb-3">
                         <label for="children" class="form-label text-black">Number of Children:</label><br>
@@ -131,70 +115,9 @@
                 </div>
             </form>
         </div>
-     {{-- <script>
-        function changeCounter(type, change) {
-            const input = document.getElementById(type);
-            const display = document.getElementById(type + '-display');
-            const currentValue = parseInt(input.value);
-            const min = parseInt(input.min);
-            const max = parseInt(input.max);
-
-            const newValue = Math.max(min, Math.min(max, currentValue + change));
-
-            input.value = newValue;
-            display.textContent = newValue;
-
-            updateButtonStates();
-        }
-
-        function updateButtonStates() {
-            // Update adults buttons
-            const adultsValue = parseInt(document.getElementById('adults').value);
-            const adultsButtons = document.querySelectorAll('.counter-field:first-of-type .counter-btn');
-            adultsButtons[0].style.opacity = adultsValue <= 1 ? '0.4' : '1';
-            adultsButtons[0].style.cursor = adultsValue <= 1 ? 'not-allowed' : 'pointer';
-            adultsButtons[1].style.opacity = adultsValue >= 10 ? '0.4' : '1';
-            adultsButtons[1].style.cursor = adultsValue >= 10 ? 'not-allowed' : 'pointer';
-
-            // Update children buttons
-            const childrenValue = parseInt(document.getElementById('children').value);
-            const childrenButtons = document.querySelectorAll('.counter-field:last-of-type .counter-btn');
-            childrenButtons[0].style.opacity = childrenValue <= 0 ? '0.4' : '1';
-            childrenButtons[0].style.cursor = childrenValue <= 0 ? 'not-allowed' : 'pointer';
-            childrenButtons[1].style.opacity = childrenValue >= 10 ? '0.4' : '1';
-            childrenButtons[1].style.cursor = childrenValue >= 10 ? 'not-allowed' : 'pointer';
-        }
-
-        // Initialize button states
-        updateButtonStates();
-    </script> --}}
-        {{-- <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-        </div> --}}
         <div class="container">
             <div class="row wow fadeInUp" data-wow-delay=".5s" id="roomGrid">
-                {{-- @if(isset($rooms, $date))
-                <h3>Available Rooms on {{ $date }}</h3>
-                @foreach($rooms as $room)
-                <div class="room-card">
-                    <h4>{{ $room->room_name }}</h4>
-
-                    <!-- other room info -->
-                </div>
-                @endforeach
-
-                @if($rooms->isEmpty())
-                <p>No rooms available on that date.</p>
-                @endif
-                @endif --}}
+            
                 @include('components.room_cards', ['rooms' => $rooms])
 
             </div>

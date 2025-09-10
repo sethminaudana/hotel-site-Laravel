@@ -150,57 +150,6 @@
       @include('components.pricing_plan')
       <!-- pricing plan area end here -->
 
-      <!-- testimonial area start here  -->
-      {{-- <section class="bd-testimonial-area pt-135 pb-125">
-         <div class="container">
-            <div class="row justify-content-center wow fadeInUp" data-wow-delay=".5s">
-               <div class="col-md-10">
-                  <div class="swiper-container bd-testimonial-active">
-                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                           <div class="bd-testimonial text-center">
-                              <div class="bd-testimonial__content">
-                                 <div class="bd-testimonial__quote">
-                                    <i class="flaticon-quote"></i>
-                                 </div>
-                                 <p>This is one of the best decisions we have ever made.
-                                    We bought a house but gained a family
-                                    who supports.</p>
-                                 <div class="bd-testimonial__quote-2">
-                                    <i class="flaticon-quote"></i>
-                                 </div>
-                                 <div class="bd-testimonial__client">
-                                    <h5 class="bd-testimonial__client-name">elden smith</h5>
-                                    <span>(Residence Owner)</span>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="bd-testimonial text-center">
-                              <div class="bd-testimonial__content">
-                                 <div class="bd-testimonial__quote">
-                                    <i class="flaticon-quote"></i>
-                                 </div>
-                                 <p>The best hotel I’ve ever been privileged enough to stay at. Gorgeous building,
-                                    and it only gets more breath taking.</p>
-                                 <div class="bd-testimonial__quote-2">
-                                    <i class="flaticon-quote"></i>
-                                 </div>
-                                 <div class="bd-testimonial__client">
-                                    <h5 class="bd-testimonial__client-name">Jhon Wick</h5>
-                                    <span>(Product Designer)</span>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section> --}}
-      <!-- testimonial area end here  -->
 
       <!-- hr-line start here  -->
       <div class="hr-line">

@@ -45,27 +45,7 @@
                             </form>
                         </div>
                     </div>
-                    {{-- @auth
-                        @if(Auth::user()->role && Auth::user()->role->role_name === 'admin')
-                            <div class="col-xxl-6 col-xl-5 col-lg-4">
-                                <div class="bd-blog-3-search mb-6 ">
-                                    <button type="button" class="bd-btn fill-btn" data-bs-toggle="modal" data-bs-target="#mediaModal">
-                                    Add Blog
-                                    </button>
-                                </div>
-                            </div>
-                        @else
-                            <p></p>
-                        @endif
-                    @else
-                        <p></p>
-                    @endauth --}}
-                    {{-- <form method="GET" action="{{ route('blog.sortbydate') }}" class="mb-3">
-                        <select name="sort" onchange="this.form.submit()" class="form-select w-auto">
-                            <option value="desc" {{ request('sort') == 'desc' ? 'selected' : '' }}>Newest First</option>
-                            <option value="asc" {{ request('sort') == 'asc' ? 'selected' : '' }}>Oldest First</option>
-                        </select>
-                    </form> --}}
+                   
 
                 </div>
                 </div>
@@ -140,32 +120,7 @@
 
                 <div class="row">
                     @if($results->isEmpty())
-                 {{-- @foreach($media as $post)
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-
-
-                                @if($post->image_path)
-                                <img src="{{ asset('storage/' . $post->image_path) }}" class="media-image mb-3" alt="Media Image">
-                                @endif --}}
-
-                            {{-- <img src="{{asset('img/blog/blog1.jpg')}}" alt="image not found"> --}}
-                        {{-- </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="/blog">
-                                {{ $post->created_at->format('d') }}<br>{{ $post->created_at->format('M') }}
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="{{url('/blog/view/'. $post->id)}}">
-                                {{ $post->title }} --}}
-                                {{-- Take A Quick Rundown At This Guide For An Vacation! --}}
-                            {{-- </a></h4>
-                        </div>
-                    </div>
-                </div>
-                 @endforeach --}}
+                
                  @else
 
                   @foreach($results as $post)
@@ -194,160 +149,11 @@
                     </div>
                 </div>
                         @endforeach
-
-                    {{-- <a href="{{ url('/blog') }}" class="btn btn-link">← Back to All Blogs</a> --}}
                     @endif
-                {{-- <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog3.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                12<br>nov
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                Best Places To Visit In Turkey In November
-                            </a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog4.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                1<br>may
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                Details Of My Stay At Royel Hotel & Resort, switzerland
-                            </a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog5.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                23<br>mar
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                Best hotel blogs and how to succeed with yours hotel
-                            </a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog6.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                21<br>jun
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                We're changing the future of travel, Watch the steps
-                            </a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog7.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                15<br>dec
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                They have specialized blogs in their different destinations.
-                            </a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog8.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                25<br>jan
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                Some of the hill stations near Ramesh waram that one
-                            </a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog9.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                15<br>jan
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                a real guide for those who are planning to travel to this country.
-                            </a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="bd-blog-2 d-flex align-items-end mb-30">
-                        <div class="bd-blog-2__thumb">
-                            <img src="{{asset('img/blog/blog2.jpg')}}" alt="image not found">
-                        </div>
-                        <div class="bd-blog-2__content">
-                            <div class="bd-blog-2__meta">
-                            <a href="blog.html">
-                                25<br>dec
-                            </a>
-                            </div>
-                            <h4 class="bd-blog-2__title"><a href="blog-details.html">
-                                Bye Bye Resort Fees - How to Fill Your
-                                Pending Revenue Hole
-                            </a></h4>
-                        </div>
-                    </div>
-                </div> --}}
+                
                 </div>
                 <div class="row">
-                {{-- <div class="col-12">
-                    <div class="bd-blog-pagination pt-20">
-                        <ul class="justify-content-center">
-                            <li><span aria-current="page" class="page-numbers current">01</span></li>
-                            <li><a class="page-numbers" href="#">02</a></li>
-                            <li><a class="next page-numbers" href="#">
-                                <i class="fa-sharp fa-solid fa-angle-right"></i>
-                            </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> --}}
+               
                 </div>
             </div>
         </section>

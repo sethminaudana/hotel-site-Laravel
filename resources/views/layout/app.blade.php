@@ -77,15 +77,7 @@
 
     <!-- header area start -->
     <header>
-        {{-- @auth
-            @if(Auth::user()->role && Auth::user()->role->role_name === 'admin')
-                <p>Welcome ADMIN</p>
-            @else
-                <p>Welcome user!</p>
-            @endif
-        @else
-            <p>Welcome Guest! Please log in..</p>
-        @endauth --}}
+       
 
         <div class="bd-header transparent-header">
 
@@ -117,39 +109,7 @@
                                 <li>
                                     <a class="nav-link {{ Request::is('room') ? 'active' : '' }}" href="{{url('/room')}}">rooms & suites</a>
                                 </li>
-                                {{-- <li class="has-dropdown has-mega-menu">
-                                    <a href="#">Pages</a>
-                                    <ul class="mega-menu">
-                                        <li><a href="javasript:void(0);" class="mega-menu-title">Page Layout 1</a>
-                                        <ul>
-                                            <li> <a href="offers.html">Offer</a></li>
-                                            <li><a href="offer-details.html">Offer Details</a></li>
-                                            <li><a href="booking-form.html">Bookinig Form</a></li>
-                                            <li><a href="error-404.html">error page</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="dining.html">DINING</a></li>
-                                        </ul>
-                                        </li>
-                                        <li><a href="javasript:void(0);" class="mega-menu-title">Page Layout 2</a>
-                                        <ul>
-                                            <li><a href="event.html">Event</a></li>
-                                            <li><a href="event-details.html">Event details</a></li>
-                                            <li><a href="faq.html">FAQ</a></li>
-                                            <li><a href="service.html">Service</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
-                                        </ul>
-                                        </li>
-                                        <li><a href="javasript:void(0);" class="mega-menu-title">Page Layout 3</a>
-                                        <ul>
-                                            <li><a href="pricing.html">Pricing Plan</a></li>
-                                            <li><a href="blog.html">Blog Main</a></li>
-                                            <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                            <li><a href="blog-classic.html">Blog Classic</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                        </li>
-                                    </ul>
-                                </li> --}}
+                               
                                 <li>
                                     <a class="nav-link {{ Request::is('dining') ? 'active' : '' }}" href="{{url('/dining')}}">Dining</a>
                                 </li>
@@ -166,35 +126,7 @@
                             </ul>
                             </nav>
                         </div>
-                        {{-- <div>
-                            @if (Route::has('login'))
-                                <nav class="flex items-center justify-end gap-4">
-                                    @auth
-                                        <a
-                                            href="{{ url('/dashboard') }}"
-                                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                                        >
-                                            Dashboard
-                                        </a>
-                                    @else
-                                        <a
-                                            href="{{ route('login') }}"
-                                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                                        >
-                                            Log in
-                                        </a>
-
-                                        @if (Route::has('register'))
-                                            <a
-                                                href="{{ route('register') }}"
-                                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                                Register
-                                            </a>
-                                        @endif
-                                    @endauth
-                                </nav>
-                            @endif
-                        </div> --}}
+                        
                         <div class="bd-header__bottom-right d-flex justify-content-end align-items-center">
                             <div class="bd-header-top-btn mr-30 d-none d-md-flex">
                                 <a href="{{url('/room')}}" class="bd-btn fill-btn">
@@ -202,54 +134,7 @@
                                 </a>
                             </div>
                         </div>
-                        {{-- <div class="bd-header__bottom-right d-flex justify-content-end align-items-center">
-                            <div class="bd-header-top-btn mr-30 d-none d-md-flex">
-                                <div >
-                                    @auth
-                                        @php
-                                            $userInitial = strtoupper(Auth::user()->name[0]);
-                                        @endphp --}}
-
-                                        {{-- user circle dropdown --}}
-                                        {{-- <div class="drop">
-                                            <button class="rounded-full" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                                {{$userInitial}}
-                                            </button>
-
-                                            <ul class="dropdown-menu dropdown-menu-end mt-2">
-                                                <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
-                                                <li>
-                                                    <form method="POST" action="{{ route('logout') }}">
-                                                        @csrf
-                                                        <button class="dropdown-item" type="submit">Logout</button>
-                                                    </form>
-                                                </li>
-                                            </ul>
-                                        </div> --}}
-                                        {{-- <a
-                                            href="{{ url('/dashboard') }}"
-                                            class="bd-btn register-btn"
-                                        >
-                                        Dashboard
-                                        <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                        </a> --}}
-                                    {{-- @else --}}
-                                        <!-- Show Login Button if not logged in -->
-                                        {{-- <a href="{{ route('login') }}" class="bd-btn register-btn">
-                                            Log In
-                                            <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                        </a> --}}
-                                        {{-- <a
-                                            href="{{ route('login') }}"
-                                            class="bd-btn register-btn"
-                                        >
-                                        Log In
-                                        <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                        </a> --}}
-                                    {{-- @endauth
-                                </div>
-                            </div>
-                        </div> --}}
+                      
 
                         <div class="bd-header-hamburger offcanvas-open-btn d-xl-none">
                             <span></span>
@@ -325,26 +210,7 @@
                             <h5>Subscribe Newsletter</h5>
                         </div>
                         <div class="bd-footer-newsletter__form">
-                            {{-- <form action="{{ route('subscribe') }}" method="POST">
-                                @csrf
-                            <div class="bd-footer-newsletter__input is-black">
-
-                                <input type="email" name="email" placeholder="Your Email" required>
-                                <button type="submit">subscribe now <i
-                                        class="fa-regular fa-arrow-right-long"></i></button>
-                                        @if ($errors->has('email'))
-                                            <div class="alert alert-danger mt-2">
-                                                {{ $errors->first('email') }}
-                                            </div>
-                                        @endif
-                                        @if(session('success'))
-                                            <div class="alert alert-success mt-2">
-                                                {{ session('success') }}
-                                            </div>
-                                        @endif
-
-                            </div>
-                            </form> --}}
+                           
                             @livewire('subscribe-form')
                         </div>
                         <div class="payment-methods mt-30">
@@ -419,48 +285,7 @@
                                     book now <span><i class="fa-regular fa-arrow-right-long"></i></span>
                                 </a>
                                 <br>
-                                {{-- @auth
-                                        @php
-                                            $userInitial = strtoupper(Auth::user()->name[0]);
-                                        @endphp --}}
-
-                                        {{-- user circle dropdown --}}
-                                        {{-- <div class="drop">
-                                            <button class="rounded-full" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                                {{$userInitial}}
-                                            </button>
-
-                                            <ul class="dropdown-menu dropdown-menu-end mt-2">
-                                                <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
-                                                <li>
-                                                    <form method="POST" action="{{ route('logout') }}">
-                                                        @csrf
-                                                        <button class="dropdown-item" type="submit">Logout</button>
-                                                    </form>
-                                                </li>
-                                            </ul>
-                                        </div> --}}
-                                        {{-- <a
-                                            href="{{ url('/dashboard') }}"
-                                            class="bd-btn register-btn"
-                                        >
-                                        Dashboard
-                                        <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                        </a> --}}
-                                    {{-- @else --}}
-                                        <!-- Show Login Button if not logged in -->
-                                        {{-- <a href="{{ route('login') }}" class="bd-btn register-btn">
-                                            Log In
-                                            <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                        </a> --}}
-                                        {{-- <a
-                                            href="{{ route('login') }}"
-                                            class="bd-btn register-btn"
-                                        >
-                                        Log In
-                                        <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                        </a> --}}
-                                    {{-- @endauth --}}
+                               
 
                 <div class="mobile-menu fix mt-40"></div>
                 <div class="offcanvas__about d-none d-lg-block mt-30 mb-30">
@@ -612,53 +437,7 @@
     }
 </script>
     @livewireScripts
-    {{-- <script>
-        console.log(typeof jQuery); // should log "function"
-
-        $(window).on('scroll', function () {
-
-            var scroll = $(window).scrollTop();
-            if (scroll < 100) {
-                $("#header-sticky").removeClass("header-sticky");
-            } else {
-                $("#header-sticky").addClass("header-sticky");
-            }
-        });
-
-
-
-
-        $(document).ready(function() {
-            $('[data-background]').each(function () {
-                var background = $(this).data('background');
-                $(this).css('background-image', 'url(' + background + ')');
-            });
-        });
-
-
-         if (window.innerWidth < 992) {
-            $(window).on('scroll', function () {
-                var scroll = $(window).scrollTop();
-                if (scroll < 100) {
-                    $("#header-top_sticky").removeClass("header-sticky");
-                } else {
-                    $("#header-top_sticky").addClass("header-sticky");
-                }
-            });
-        }
-
-
-
-        $(document).ready(function() {
-            $('[data-background]').each(function () {
-                var background = $(this).data('background');
-                $(this).css('background-image', 'url(' + background + ')');
-            });
-        });
-        console.log(typeof jQuery); // should log "function"
-
-
-    </script> --}}
+   
     @stack('scripts')
 
 </body>

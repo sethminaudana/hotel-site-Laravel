@@ -166,76 +166,13 @@
                      <div class="bd-booking-3 bg-white">
                         <div class="bd-booking-3__content">
                            <h3 class="bd-booking-3__title mb-35">Reserve Your Room</h3>
-                           {{-- <div class="bd-booking-3__price">
-                              <p>
-                                 <i class="flaticon-group"></i>
-                                 <span>For 2 Adults</span>
-                              </p>
-                              <p>
-                                 <span><del>$299</del>$199</span>/ NIGHT
-                              </p>
-                           </div>
-                           <div class="bd-booking-3__tax">
-                              <p>
-                                 <span><i class="fa-light fa-times"></i> Non-Refundable</span>
-                                 +$49 taxes & fees
-                              </p>
-                           </div>
-                        </div>
-                        <div class="bd-booking-3__form">
-                           <form action="#">
-                              <div class="bd-booking-3__input-wrap">
-                                 <div class="bd-booking-3__input">
-                                    <label for="checkIn">CHECK-IN</label>
-                                    <div class="bd-booking-3__input-inner p-relative">
-                                       <i class="flaticon-calendar-2"></i>
-                                       <input type="text" id="checkIn" class="bd-date-picker" placeholder="check in">
-                                    </div>
-                                 </div>
-                                 <div class="bd-booking-3__input">
-                                    <label for="checkOut">CHECK-OUT</label>
-                                    <div class="bd-booking-3__input-inner p-relative">
-                                       <i class="flaticon-calendar-2"></i>
-                                       <input type="text" id="checkOut" class="bd-date-picker" placeholder="check out">
-                                    </div>
-                                 </div>
-                                 <div class="bd-booking-3__input">
-                                    <label for="totalGuest">GUESTS</label>
-                                    <select class="bd-nice-select mb-20" id="totalGuest">
-                                       <option>01</option>
-                                       <option>02</option>
-                                       <option>03</option>
-                                       <option>04</option>
-                                       <option>05</option>
-                                    </select>
-                                 </div>
-                                 <div class="bd-booking-3__input">
-                                    <label for="extraService">EXTRA SERVICE</label>
-                                    <select class="bd-nice-select mb-20" id="extraService">
-                                       <option>Spa & Massage</option>
-                                       <option>Restaurant Service</option>
-                                       <option>Swimming Coach</option>
-                                       <option>Cultural Food</option>
-                                    </select>
-                                 </div>
-                                 <div class="bd-booking-3__input">
-                                    <label for="extraService">ROOM TYPE</label>
-                                    <select class="bd-nice-select" id="roomType">
-                                       <option>Single Room</option>
-                                       <option>Double Room</option>
-                                       <option>Family Room</option>
-                                       <option>Delux Luxury Room</option>
-                                    </select>
-                                 </div>
-                              </div> --}}
+                          
                               <form action="/room">
                               <div class="bd-booking-3__submit mt-65">
                                  <button type="submit" >BOOK NOW<i class="fa-regular fa-arrow-right-long"></i></button>
                               </div>
                               </form>
-                           {{-- </form> --}}
-                        {{-- </div>
-                     </div> --}}
+                           
                   </div>
                </div>
             </div>
