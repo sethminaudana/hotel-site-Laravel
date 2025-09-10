@@ -11,7 +11,7 @@ class SettingController extends Controller
     //
     public function updateMap(Request $request)
 {
-    dd('get');
+    // dd('get');
     $request->validate([
         'map_url' => 'required|string',
     ]);
