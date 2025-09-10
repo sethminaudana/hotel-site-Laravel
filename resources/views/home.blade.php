@@ -256,7 +256,7 @@
         <!-- welcome area end here  -->
 
         <!-- room area end here  -->
-        <section class="bd-room-area p-relative pt-150 pb-120">
+        <section class="bd-room-area p-relative pt-150 pb-120 mt-5">
             <div class="bd-room__bg" data-background="{{asset('img/roombg.jpg')}}"></div>
             <div class="container">
                 <div class="row align-items-end wow fadeInUp" data-wow-delay=".5s">
