@@ -50,12 +50,12 @@
                         $settings = \App\Models\AboutusImg::first();
                         @endphp
                      <div class="bd-welcome__thumb transform-none">
-                        <img src="{{asset('storage/' . ($settings->welcome_image ?? 'welcome.jpg'))}}" alt="image not found">
+                        <img src="{{asset('welcome.jpg')}}" alt="image not found">
                      </div>
                   </div>
                </div>
                <div class="col-lg-6">
-                  <div class="bd-welcome__bg" data-background="{{asset('storage/' . ($settings->background_image ?? 'welcome2.jpg'))}}">
+                  <div class="bd-welcome__bg" data-background="{{asset('welcome2.jpg')}}">
                      <div class="bd-welcome__right p-relative">
                         <div class="bd-welcome__video-btn-2 dark-btn wow fadeInUp" data-wow-delay=".5s">
                            <a href="https://www.youtube.com/watch?v=H_zTepNXDDg" class="popup-video">
